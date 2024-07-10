@@ -1,0 +1,10 @@
+*
+{
+ background-color: black;
+}
+#canvas_containerRatio
+{
+    width: 100%;
+    height: 500px;
+    align-items: center;
+}
