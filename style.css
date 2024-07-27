@@ -1,10 +1,320 @@
 *
 {
- background-color: black;
+    
+    font-size: 30px;
+}
+.header
+{
+    display: flex;
+    justify-content:space-around;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 130px;
+    align-items: center;
+    margin-top: -220px;
+    margin-bottom: 100px;
+    box-shadow: 0px 3px 3px 0px  #979797;
+    position: fixed;
+    margin-left: -20px;
+    z-index: 800;
+}
+.logo
+{
+    width: 120px; 
+    height: fit-content; 
+    margin-top: -10px;
+}
+#logos_
+{
+    height: 60%; 
+    width: 100%;
+}
+.toppings
+{
+    display: flex;
+    flex-direction: row;
+}
+.toppings span
+{
+    margin-left: 6%;
+}
+.toppings span::hover
+{
+    text-shadow: 3px 3px 2 #cbcbcb;
 }
 #canvas_containerRatio
 {
     width: 100%;
-    height: 500px;
+    height: 350px;
+    margin-top: 220px;
     align-items: center;
+}
+.section_1
+{
+    width: 100%;
+    margin-top: 45px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section_2
+{
+    width: 100%;
+    height: fit-content;
+}
+.section_2 p
+{
+    font-size: 50px;
+    margin-left: 7%;
+}
+.section_3
+{
+    height: 100%;
+    width: 100%;
+    margin-top: 70px;
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.section_3 img
+{
+    height: 100%;
+    width: 35%;
+    filter: blur(1.5px);
+    z-index: 5;
+}
+.section_3 p
+{
+    margin-left:10%;
+    font-size: 35px;
+    margin-top: 80px;
+}
+.line_break
+{
+    width: 100%;
+    height: 2px;
+    background-color: #D7D4CD;
+    margin-top: 20px;
+}
+.section_4
+{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.section_4 img
+{
+    width: 40%;
+    height: 100%;
+    margin-top: 150px;
+    z-index: 5;
+    background-color: transparent;
+}
+.section_4 p 
+{
+    margin-top: -20px;
+}
+.arrow_1
+{
+    margin-top: -345px;
+    display: flex;
+    justify-content: center;
+    margin-left: 25%;
+}
+.arrow_1 img
+{
+    width: 17%;
+    height: 280px;
+    rotate: 210deg;
+    z-index: 5;
+}
+.section_5
+{
+    margin-top: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+.section_5 img
+{
+    width: 40%;
+    height: 100%;
+    z-index: 5;
+    background-color: transparent;
+}
+.section_5 p
+{
+    margin-top: 280px;
+}
+.arrow_2
+{
+    margin-top: -450px;
+    display: flex;
+    justify-content: center;
+    margin-left: -15%;
+}
+.arrow_2 img
+{
+    width: 22%;
+    rotate: 105deg;
+    z-index: 5;
+}
+.section_6 
+{
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    background-color: transparent;
+}
+.section_6 p 
+{
+    margin-top: 0px;
+    margin-left: 13%;
+}
+.section_6 img
+{
+   width: 130%;
+   height: 100%;
+   z-index: 50; 
+}
+.arrow_3
+{
+    background-color: transparent;
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+}
+.arrow_3 img
+{
+    width: 13%;
+    rotate: -45deg;
+    margin-left: 53%;
+    height: 260px;
+    z-index: 5;
+    margin-top: 0px;
+}
+.binary
+{
+    font-size: 25px;
+    letter-spacing: 10px;
+    line-height: 50px;
+    opacity: 0.2;
+    position: relative;
+    margin-top: -1400px;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+}
+.arrow_4
+{
+    background-color: transparent;
+    width: 100%;
+    text-align: center;
+}
+.arrow_4 img
+{
+    margin-left: 17%;
+    margin-top: -100px;
+    z-index: 5;
+}
+.projects
+{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;  
+}
+.projects div
+{
+    width: 600px;
+    height: 500px;
+    margin-bottom: 100px;
+    border-radius: 30px;
+    border: 3px solid #D7D4CD;
+    z-index: 1;
+    text-align: center;
+}
+.projects span
+{
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+.projects p
+{
+    font-size: 90px;
+    position: relative;
+    text-align: right;
+    margin-top: -70px;
+    z-index: 5;
+    background-color: transparent;
+    filter: blur(2px);
+}
+.projects section
+{
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 350px;
+}
+.projects div span
+{
+    font-size: 40px;
+}
+.projects div section img
+{
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 5;
+    height: 100%;
+    width: 80%;
+    border: 2px solid black;
+}
+.section_7
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 100px;
+    height: fit-content;
+    text-align: center;
+    flex-direction: column;
+}
+.section_7 p
+{
+    font-size: 50px;
+}
+.section_7 button
+{
+    border: 3px solid white;
+    border-radius: 13px;
+    padding: 4px;
+    margin-top: 70px;
+    height: 70px;
+    color: #D7D4CD;
+    width: 350px;
+    background-color: black;
+}
+.icons
+{
+    margin-top: 120px;
+    display: flex;  
+    width: 100%;
+    height: fit-content;
+}
+.icons div
+{
+    margin-left: 40%;
+}
+.icons dl, ol, ul
+{
+    display: flex;
+    margin-left: -5%;
+}
+.icons li
+{
+    margin-left: 33%;
 }
