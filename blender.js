@@ -1,7 +1,5 @@
-//three js
 
-import logoLightUrl from './logo_light.png';
-import logoDarkUrl from './logo_dark.png';
+//three js
 
 import * as THREE from 'three';
 //used to load 3d graphics gltf files. 
@@ -54,7 +52,7 @@ renderer.setClearColor(0x000000, 0);
 //DRACOLoader
 const dracoLoader = new DRACOLoader();
 //points to the path where the compressed files are, in this case googles draco loader
-dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/');
+dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.4.1/'); 
 
 // Set up GLTFLoader and assign DRACOLoader
 const assetLoader = new GLTFLoader();
@@ -71,31 +69,31 @@ assetLoader.load(
         //adds the model
         scene.add(model);
 
-        model.position.set(1, -2, 8);
-        model.scale.set(2.3, 2.3, 2.3);
+        model.position.set(1, -2, 8); 
+        model.scale.set(2.3,2.3,2.3);    
 
         //sets a variable for the speed and direction of movement along the yaxis
-        let y_Direction = 0.006;
+        let y_Direction = 0.006;  
 
-        function animate() {
-            //this requests the browser to call the animate function on loop.
-            requestAnimationFrame(animate);
-            //if the model has loaded in the browser
-            if (model) {
-                //this model updates the y direction of the model, if it is positive it will go up, if negative it will go down
-                model.position.y += y_Direction;
-                //boundary values between the movement of the model
-                if (model.position.y > -2 || model.position.y < -3) {
-                    //if the model has gone above 0, it will reverse the direction making it go down, and if it goes below -0.5 it will start going back up
-                    y_Direction = -y_Direction;
-                }
-            }
-            //it tells the renderer to draw the scene from the prespective camera and ensures that poistions of display are updated effectively
-            renderer.render(scene, camera);
+function animate() {
+    //this requests the browser to call the animate function on loop.
+    requestAnimationFrame(animate);
+    //if the model has loaded in the browser
+    if (model) {
+        //this model updates the y direction of the model, if it is positive it will go up, if negative it will go down
+        model.position.y += y_Direction;
+        //boundary values between the movement of the model
+        if (model.position.y > -2 || model.position.y < -3) {
+            //if the model has gone above 0, it will reverse the direction making it go down, and if it goes below -0.5 it will start going back up
+            y_Direction = -y_Direction;
         }
-        //run the animate 
-        //if there is an error for loading the model, it will display error. 
-        animate();
+    }
+    //it tells the renderer to draw the scene from the prespective camera and ensures that poistions of display are updated effectively
+    renderer.render(scene, camera);
+}
+//run the animate 
+//if there is an error for loading the model, it will display error. 
+animate();
     },
     undefined,
     function (error) {
@@ -103,84 +101,51 @@ assetLoader.load(
     }
 );
 
-//three js ends
+// window.addEventListener('load', function() {
+//     setTimeout(function () {
+//         document.querySelector('.path').style.stroke = '#D7D4CD';
+//         document.querySelector('.path').style.strokeWidth = '1';
+//         document.querySelector('.path').style.fill = 'none';
+//         document.querySelector('.path').style.strokeAasharray = '157';
+//         document.querySelector('.path').style.strokeDashoffset = '157';
+//         document.querySelector('.path').style.animation = 'draw 10s ease forwards';    
+//     }, 2500)
+// })
 
-let light = document.getElementById("light");
-let dark = document.getElementById("dark");
-let logo = document.getElementById("logos_");
-let project = document.getElementsByClassName("project");
-let house = document.getElementById("house");
-let button = document.getElementById("button");
-let line_break = document.getElementsByClassName("line_break");
-let header = document.getElementById("headers");
-let arrow_1 = document.getElementById("arrow_1");
-let arrow_2 = document.getElementById("arrow_2");
-let arrow_3 = document.getElementById("arrow_3");
-let arrow_4 = document.getElementById("arrow_4");
-let design_2 = document.getElementById("design_2");
 
-light.addEventListener("click", function () {
-    dark.style.display = 'block';
-    light.style.display = 'none';
-    document.body.style.backgroundColor = 'white';
-    document.body.style.color = 'black';
+// window.addEventListener('load',function(){
+//     setTimeout(function(){
+//         document.querySelector('.main_content').style.visibility = 'visible';
+//     },8400)
+// });
 
-    logo.src = logoLightUrl;
+document.getElementById('logos_').addEventListener('click', function()
+    {
+        window.scrollTo({ top: 0, behavior: 'smooth'});
+    });
+document.getElementById('house').addEventListener('click', function()
+   {
+        window.scrollTo({ top: 0, behavior: 'smooth'});
+    });
 
-    house.style.fill = 'black';
-    button.style.backgroundColor = 'white';
-    button.style.color = 'black';
-    button.style.border = '3px solid black';
-    header.style.backgroundColor = 'white';
-    arrow_1.src = 'arrow_1_light.png';
-    arrow_2.src = 'arrow_2_light.png';
-    arrow_3.src = 'arrow_3_light.png';
-    arrow_4.src = 'arrow_4_light.png';
-    design_2.src = 'design_2_light.png';
-    for (let k = 0; k < line_break.length; k++) {
-        line_break[k].style.backgroundColor = 'black';
-    }
-    for (let j = 0; j < project.length; j++) {
-        project[j].style.border = '3px solid black';
-    }
-});
-
-dark.addEventListener("click", function () {
-    light.style.display = 'block';
-    dark.style.display = 'none';
-    document.body.style.backgroundColor = 'black';
-    document.body.style.color = '#D7D4CD';
-
-    logo.src = logoDarkUrl;
-
-    house.style.fill = '#D7D4CD';
-    button.style.backgroundColor = 'black';
-    button.style.color = '#D7D4CD';
-    button.style.border = '3px solid white';
-    header.style.backgroundColor = 'black';
-    arrow_1.src = 'arrow_1_dark.png';
-    arrow_2.src = 'arrow_2_dark.png';
-    arrow_3.src = 'arrow_3_dark.png';
-    arrow_4.src = 'arrow_4_dark.png';
-    design_2.src = 'design_2.png';
-    for (let k = 0; k < line_break.length; k++) {
-        line_break[k].style.backgroundColor = '#D7D4CD';
-    }
-    for (let j = 0; j < project.length; j++) {
-        project[j].style.border = '3px solid #D7D4CD';
-    }
-
-});
 
 document.querySelectorAll('.hamburger').forEach(hamburger => {
-    hamburger.addEventListener('click', function () {
-        // Get the target section ID from the data-scroll-to attribute
-        const target_section = this.getAttribute('data-scroll-to');
-        // get the target section element
-        const target_element = document.getElementById(target_section);
-        //scroll to the target element
-        if (target_element) {
-            target_element.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+hamburger.addEventListener('click', function(){
+// Get the target section ID from the data-scroll-to attribute
+const target_section = this.getAttribute('data-scroll-to');
+// get the target section element
+const target_element = document.getElementById(target_section);
+//scroll to the target element
+target_element.scrollIntoView({ behavior : 'smooth' });
+});
+});
+
+let cursor = document.querySelector('.cursor');
+let cursor2 = document.querySelector('.cursor2');
+let cursor_text = document.querySelector('.cursor_text');
+
+document.addEventListener('mousemove',function(e){
+    cursor.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    cursor2.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
+    cursor_text.style.cssText = "left: " + e.clientX + "px; top: " + e.clientY + "px;";
 });

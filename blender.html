@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script type="module" src="blender.js"></script>  
+  </head>
+
+<body class="container-fluid" style=" background-color: black; margin-top: 40px; padding-left: 20px; padding-right: 20px; color: #D7D4CD; ">
+
+<div class="main_content">
+
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <div class="cursor_text"> 
+      <div class="first_">
+      <p style="transform: rotate(25deg); margin-top:90px;">y</p>
+      <p style="transform: rotate(10deg); margin-top: 96px; margin-left: 7px;">u</p>
+      <p style="transform: rotate(12deg); margin-top: 99px; margin-left: 15px;">s</p>
+      <p style="transform: rotate(10deg); margin-top: 101px; margin-left: 23px;">r</p>
+      <p style="transform: rotate(10deg); margin-top: 102px; margin-left: 30px;">a</p>
+    </div>
+      <div class="second_">
+        <p style="transform: rotate(-90deg); margin-top: 105px; margin-left: -4px;">p</p>
+        <p style="transform: rotate(-98deg); margin-top: 97px; margin-left: -2px;">a</p>
+        <p style="transform: rotate(-105deg); margin-top: 89px; margin-left: -1px;">r</p>
+        <p style="transform: rotate(-110deg); margin-top: 81px; margin-left: -1px;">a</p>
+        <p style="transform: rotate(-115deg); margin-top: 73px; margin-left: -4px;">c</p>
+        <p style="transform: rotate(-120deg); margin-top: 65px; margin-left: -7px;">h</p>
+        <p style="transform: rotate(-140deg); margin-top: 57px; margin-left: -12px;">a</p>
+      </div>
+    </div>
+    
+    <div class="header" id="headers">
+
+    <div class="logo">
+    <img id="logos_" src="logo_dark.png">
+    </div>
+    
+    <div class="toppings" style="font-family: Andale Mono, monospace">
+    <span class="hamburger" data-scroll-to="project">Work</span >
+    <span class="hamburger" data-scroll-to="about">About</span>
+    <span class="hamburger" data-scroll-to="contact">Contact</span>
+    </div>
+
+    </div>
+
+    <div id="canvas_containerRatio"></div>
+
+    <div class="section_1">
+      <p>I'm a passionate developer and designer, <br> dedicated to making your digital interactions <br>smooth and enjoyable.</p>
+    </div>
+
+    <div class="section_2">
+    <span>Hola, I'm yusra.</span>
+    <span>Hola, I'm yusra.</span>
+    </div>
+
+    <div class="section_3" id="about">
+    <img src="karachi.png">
+    <p>Bringing creativity and code to life, all the way from the sunny 40°C warmth of Karachi, Pakistan.</p>    </div>
+
+    <div class="line_break" ></div>
+    <div class="middle_section">
+
+    
+    <div class="section_4">
+    <img src="design_1.png">
+    <p>Since 2021, I've been passionate about blending code and creativity to make unique digital art.</p>
+    </div>
+
+    <div class="arrow_1">
+    <img src="arrow_1_dark.png" id="arrow_1">
+    </div>
+
+    <div class="section_5">
+    <p>My journey combines a mix of technical skills and artistic flair, bringing ideas to life beautifully.</p>
+    <img src="design_2.png" id="design_2">  
+    </div>
+
+    <div class="arrow_2" >
+    <img src="arrow_2_dark.png" id="arrow_2">
+    </div>
+
+    <div class="arrow_3">
+    <img src="arrow_3_dark.png" id="arrow_3">
+    </div>
+
+    <div class="section_6" id="project">
+    <img src="design_3.png">
+    <p>Let's team up and transform your vision into an amazing online experience!</p>
+  </div>
+
+    <div class="arrow_4" >
+    <img src="arrow_4_dark.png" id="arrow_4">
+    </div>
+
+    <div class="binary">
+    1 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1 1 1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0
+    </div>
+
+  </div>
+
+    <div class="line_break"></div>
+    <div style="width: 100%; text-align: center; margin-top: 40px;"><span style="font-size: 80px;">WORK</span></div>
+
+    <div class="experience">
+    
+    <div class="bullets_">
+    <div class="whole_">
+      <span></span>
+      <p style="font-size: 14px;">Aug 2023- July 2024</p>
+      <p>Academic Instructor · WFH</p>
+      <p style="font-size: 19px;">As a seasoned professional :  
+      <br>- Utilized online tools and platforms to create an engaging and interactive virtual learning environment.
+      <br>- Monitored student progress and provided regular feedback to support continuous improvement.
+      <br>- Collaborated with parents and guardians to address student needs and foster a supportive learning atmosphere. 
+      </p>
+      <div class="massive_button"><button>Assessment</button><button>Subject Expertise</button><button>Communication</button></div>
+    </div>
+    
+    <div class="whole_">
+      <span></span>
+      <p style="font-size: 14px;">Feb 2024 - Mar 2024</p>
+      <p>CodSoft · Freelance</p>
+      <p style="font-size: 19px;">Engaging in hands-on tasks : 
+      <br>- Designing mobile app signup flows for optimal user experiences.
+      <br>- Creating visually captivating email templates. 
+      <br>- Crafting user-friendly restaurant menus 
+      - Developing seamless e-commerce websites. 
+      </p>
+      <div class="massive_button"><button>UI/UX</button><button>Figma</button><button>Canva</button></div>
+    </div>
+    
+    <div class="whole_">
+      <span></span>
+      <p style="font-size: 14px;">Jan 2023 - Aug 2023</p>
+      <p>Holocreators GmbH · Freelance</p>
+      <p style="font-size: 19px;">Key contributions :
+      <br>- Leveraged Apollo.io for targeted lead generation, extracting valuable data for companies posting jobs on Upwork.
+      <br>- Empowered my client with actionable insights, enabling strategic connections with key decision-makers and businesses.
+      <br>- Handled client's recruitment platform, analyzing talent and providing 
+      prompt response.</p>
+      <div class="massive_button"><button>Apollo.io</button><button>Lead generation</button><button>Data Management</button></div>
+    </div>
+    
+      <div class="whole_">
+      <span></span>
+      <p style="font-size: 14px;">Aug 2022 - Dec 2022</p>
+      <p>Wiethe CGI GmbH · Freelance</p>
+      <p style="font-size: 19px;">Key Contributions:
+      <br>- Utilized Facebook groups, LinkedIn, and various freelance platforms to source top-tier talent for diverse job opportunities.
+      <br>- Conducted meticulous online interviews to assess candidates' skills, ensuring alignment with the specific requirements of each role.
+      <br>- Used my proficiency in data entry to ensure accurate timely 
+      managment of the work inside excel sheet.</p>
+      <div class="massive_button"><button>Recruitment</button><button>Talent Management</button><button>Virtual Assistance</button></div>
+    </div>
+    
+    </div>
+    
+  </div>
+
+    <div class="line_break"></div>
+
+    
+    <div class="projects">
+    <span>PROJECTS</span>
+    <div class="project"><p>1</p><section><a href="https://www.figma.com/design/jeVkLz36nr3TCLhXfNcIgn/Ecommerce-website?node-id=0-1&t=jOboreliiNajwGnO-1" target=”_blank”><img src="project_1.png"></a></section><span>Figma Design</span><br></div>
+    <div class="project"><p>2</p><section><a href="https://syas.vercel.app/" target=”_blank”><img src="project_2.png"></a></section><span>Front-end Website</span><br></div>    
+    <div class="project"><p>3</p><section><a href="https://www.figma.com/design/mwJXhWGJQmt020ly3CxSvK/Mobile-app-signup-flow?node-id=0-1&t=iN2ppVzzOfXT9F0Y-1" target=”_blank”><img src="project_3.png"></a></section><span>Figma design</span><br></div>
+    <div class="project"><p>4</p><section><a href="https://www.canva.com/design/DAGLkXuwF4g/6vJYfqJ5rPg-13GJAR9XNA/edit?utm_content=DAGLkXuwF4g&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target=”_blank”><img src="project_4.png"></a></section><span>Canva Design</span><br></div>
+    </div>
+
+    <div class="line_break"></div>
+
+    <div class="section_7" id="contact">
+    <p>READY TO CREATE <br>SOMETHING TOGETHER?</p>
+    <a href="tel:+923188227290"><button>Get in touch with me</button></a>
+    </div>
+
+    <div class="icons">
+    <div><svg xmlns="http://www.w3.org/2000/svg" id="house" width="50" height="50" fill="#D7D4CD" class="bi bi-house" viewBox="0 0 16 16">
+      <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+      </svg></div>
+    <div><a href="https://www.linkedin.com/in/yusra-paracha-809174205" target=”_blank”>LinkedIn</a></div>
+    <div><a href="https://www.upwork.com/freelancers/~017b23a26e65aff4f0" target=”_blank”>UpWork</a></div>
+    <div><a href="mailto:parachafreelancing18@hotmail.com" target=”_blank”>Email</a></div>
+    </div>
+    
+
+</div>
+  </body>
+</html>

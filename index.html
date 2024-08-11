@@ -1,123 +1,263 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    </head>
+    <style>
+*
+{
+    font-size: 30px;
+    font-family: Andale Mono, monospace; 
+}
+.welcome 
+{
+    opacity: 0;
+    transform: translateY(100px); /* Start off-screen */
+}
+.welcome.show 
+{
+    animation: jumpIn 1s ease forwards;
+    font-weight: bold;
+}
 
-    <body class="container-fluid" style=" background-color: black; 
-    margin-top: 40px; 
-    padding-left: 20px; 
-    padding-right: 20px; 
-    color: #D7D4CD;">
+@keyframes jumpIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(-220px);
+    }
+    50% {
+        
+        transform: translateY(-180px);
+    }
+    100% {
+        transform: translateY(-180px);
+        opacity: 1;
+    }
+}
+.semi-circle 
+{
+width: 650px;
+position: absolute;
+margin-top: 0px;
+}
+.semi-circle svg 
+{
+width: 100%;
+height: 100%;
+rotate: 180deg;
+}
+.path 
+{
+stroke: #D7D4CD;
+stroke-width: 1;
+fill: none;
+stroke-dasharray: 157; /* This should match the path length */
+stroke-dashoffset: 157; /* Start with the stroke hidden */
+animation: draw 10s ease forwards; /* Animate the stroke */
+}
+
+@keyframes draw 
+{
+    to 
+    {
+       stroke-dashoffset: 0; /* Reveal the stroke */
+    }
+}
+
+.letter 
+{
+display: inline-block;
+font-size: 60px;
+animation: moveIn 5s ease-in-out forwards;
+position: relative;
+will-change: transform, top, left;
+}  
+
+@keyframes moveIn 
+{
+      0% {
+        transform: translate(var(--initial-left), var(--initial-top)) rotate(var(--initial-rotate));
+
+      }
+      100% {
+        transform: translate(var(--last-left), var(--last-top)) rotate(var(--last-rotate));
+      }
+}
+  
+  .letter:nth-child(1) {
+    --initial-top: 300px;
+    --initial-left: 100px;
+    --initial-rotate: 60deg;
+    --last-top: 10px;
+    --last-left: 24px;
+    --last-rotate: -185deg
+}
+
+.letter:nth-child(2) {
+    --initial-top: -520px;
+    --initial-left: 530px;
+    --initial-rotate: 100deg;
+    --last-top: -55px;
+    --last-left: -17px;
+    --last-rotate: -169deg
+}
+
+.letter:nth-child(3) {
+    --initial-top: -300px;
+    --initial-left: 850px;
+    --initial-rotate: -60deg;
+    --last-top: -123px;
+    --last-left: -40px;
+    --last-rotate: -145deg
+}
+
+.letter:nth-child(4) {
+    --initial-top: 190px;
+    --initial-left: 250px;
+    --initial-rotate: 180deg;
+    --last-top: -183px;
+    --last-left: -45px;
+    --last-rotate: -125deg
+}
+
+.letter:nth-child(5) {
+    --initial-top: 230px;
+    --initial-left: 80px;
+    --initial-rotate: 310deg;
+    --last-top: -217px;
+    --last-left: -36px;
+    --last-rotate: -115deg
+}
+
+.letter:nth-child(6) {
+    --initial-top: -430px;
+    --initial-left: 300px;
+    --initial-rotate: -160deg;
+    --last-top: -243px;
+    --last-left: -10px;
+    --last-rotate: -93deg
+}
+
+.letter:nth-child(7) {
+    --initial-top: 130px;
+    --initial-left: 150px;
+    --initial-rotate: 70deg;
+    --last-top: -240px;
+    --last-left: 14px;
+    --last-rotate: -80deg
+}
+
+.letter:nth-child(8) {
+    --initial-top: -220px;
+    --initial-left: 800px;
+    --initial-rotate: 60deg;
+    --last-top: -225px;
+    --last-left: 35px;
+    --last-rotate: -50deg
+}
+
+.letter:nth-child(9) {
+    --initial-top: -10px;
+    --initial-left: 200px;
+    --initial-rotate: 50deg;
+    --last-top: -187px;
+    --last-left: 41px;
+    --last-rotate: -50deg
+}
+
+.letter:nth-child(10) {
+    --initial-top: -100px;
+    --initial-left: 700px;
+    --initial-rotate: 20deg;
+    --last-top: -130px;
+    --last-left: 35px;
+    --last-rotate: -30deg
+}
+
+.letter:nth-child(11) {
+    --initial-top: 100px;
+    --initial-left: 650px;
+    --initial-rotate: 180deg;
+    --last-top: -60px;
+    --last-left: 15px;
+    --last-rotate: -10deg
+}
+
+.letter:nth-child(12) {
+    --initial-top: 300px;
+    --initial-left: 150px;
+    --initial-rotate: 160deg;
+    --last-top: 10px;
+    --last-left: -24px;
+    --last-rotate: 0deg
+}
+
+    </style>
     
-    <div class="header" id="headers">
+</head>
+<body class="container-fluid" style=" background-color: black; margin-top: 40px; padding-left: 20px; padding-right: 20px; color: #D7D4CD; ">
 
-    <div class="logo">
-    <img src="logo_dark.png" id="logos_">
-    </div>
+    
+<div class="splash" style=" width: 98%; height: 98%; font-size: 90;  display: grid; place-items: center; position: fixed;">
 
-    <div id="light_dark" style="width: 45px;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="#D7D4CD" class="bi bi-brightness-high" viewBox="0 0 16 16" id="light" style="display: block;">
-    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+    <div class="welcome" style="position: absolute; font-size: 55px; color: rgb(133, 133, 236);">Welcome!</div>
+    
+    <div style="margin-top: -430px;">  
+  
+      <p class="letter">Y</p>
+      <p class="letter">U</p>
+      <p class="letter">S</p>
+      <p class="letter">R</p>
+      <p class="letter">A</p>
+  
+      <p class="letter">P</p>
+      <p class="letter">A</p>
+      <p class="letter">R</p>
+      <p class="letter">A</p>
+      <p class="letter">C</p>
+      <p class="letter">H</p> 
+      <p class="letter">A</p>
+  
+  </div>
+  
+  
+  
+  
+  <div class="semi-circle">
+    <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+      <path class="path" d="M 10 50 A 40 40 0 0 1 90 50" />
+          <!-- This draws the semi-circle -->
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="black" class="bi bi-brightness-high-fill" viewBox="0 0 16 16" id="dark" style="display: none;">
-    <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
-    </svg>
-    </div>
+  </div>
+  
     
-    <div class="toppings">
-    <span class="hamburger" data-scroll-to="project">Work</span >
-    <span class="hamburger" data-scroll-to="about">About</span>
-    <span class="hamburger" data-scroll-to="contact">Contact</span>
-    </div>
-
-    </div>
-
-    <div id="canvas_containerRatio"></div>
-
-    <div class="section_1">
-    <p>Passionate developer and designer. With a keen eye for<br> aesthetics I specialize in creating visually Passionate developer <br>  and designer dedicated to to to crafting intuitive user experiences. </p>
-    </div>
-
-    <div class="section_2">
-    <p>Heyy,<br> I'm yusra.</p>
-    </div>
-
-    <div class="section_3" id="about">
-    <img src="karachi.png">
-    <p>A front-end dev <br>and designer working remotely<br> from 40 C Karachi, Pakistan.<br> A front-end dev working<br>and designer working remotely<br> from 40 C Karachi, Pakistan </p>
-    </div>
-
-    <div class="line_break" ></div>
-
+  </div>
     
-    <div class="section_4">
-    <img src="design_1.png">
-    <p>Since 2022, I've enjoyed creating <br>code art code Since 2022, I've<br> enjoyed creating</p>
-    </div>
 
-    <div class="arrow_1">
-    <img src="arrow_1_dark.png" id="arrow_1">
-    </div>
+  <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.querySelector('.welcome').classList.add('show');
+    }, 5500); 
+});
 
-    <div class="section_5">
-    <p>My journey is a blend of technical expertise and artistic flair.My journey is a blend of technical expertise and artistic flair</p>
-    <img src="design_2.png" id="design_2">  
-    </div>
 
-    <div class="arrow_2" >
-    <img src="arrow_2_dark.png" id="arrow_2">
-    </div>
-
-    <div class="arrow_3">
-    <img src="arrow_3_dark.png" id="arrow_3">
-    </div>
-
-    <div class="section_6" id="project">
-    <img src="design_3.png">
-    <p>Let's collaborate and turn your vision into a captivating online experience.</p>
-    </div>
-
-    <div class="arrow_4" >
-    <img src="arrow_4_dark.png" id="arrow_4">
-    </div>
-
-    <div class="binary">
-    1 1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 1 1 1  1 0 1 0 0 1 1 0 1 0 0 0 1 0 1 1 1 0 0 1 1 0
-    </div>
-
-    <div class="line_break"></div>
-    
-    <div class="projects">
-    <span>PROJECTS</span>
-    <div class="project"><p>1</p><section><img src="project_1.png"></section><span>Figma Design</span><br></div>
-    <div class="project"><p>2</p><section><img src="project_2.png"></section><span>3D Blender Model</span><br></div>
-    <div class="project"><p>3</p><section><img src="project_3.png"></section><span>Front-end Website</span><br></div>
-    <div class="project"><p>4</p><section><img src="project_4.png"></section><span>Canva Design</span><br></div>
-    </div>
-
-    <div class="line_break"></div>
-
-    <div class="section_7" id="contact">
-    <p>READY TO CREATE <br>SOMETHING TOGETHER?</p>
-    <button id="button">Get in touch with me</button>
-    </div>
-
-    <div class="icons">
-    <ul>
-    <li style="list-style-type: none;"><svg xmlns="http://www.w3.org/2000/svg" id="house" width="50" height="50" fill="#D7D4CD" class="bi bi-house" viewBox="0 0 16 16">
-    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
-    </svg></li>
-    <li><div>LinkedIn</div></li>
-    <li><div>UpWork</div></li>
-    <li><div>Email</div></li>
-    </ul>
-    </div>
-    
-    <script type="module" src="blender.js"></script>
-
-  </body>
+setTimeout(() => {
+      window.location.href = 'blender.html';
+    }, 8000); 
+// window.addEventListener('load', function(){
+//     setTimeout(function(){
+//         document.querySelector('.splash').style.opacity = '0';
+//         document.querySelector('.splash').style.transition = 'opacity 1s ease-in-out';
+//         document.querySelector('.splash').style.display = 'none';
+//     },8000)
+// });</script>
+</body>
 </html>
